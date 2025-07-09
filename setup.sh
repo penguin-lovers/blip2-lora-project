@@ -1,18 +1,18 @@
 #!/bin/bash
 
-# 시스템 기본 패키지
+# ① 시스템 패키지 설치
 sudo apt update && sudo apt install -y git wget unzip python3-pip
 
-# pip 최신화
+# ② pip 최신화
 pip install --upgrade pip
 
-# PyTorch (CUDA 12.1 기준)
+# ③ PyTorch (CUDA 버전 지정)
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
-# 필수 패키지
+# ④ 필요한 Python 라이브러리 설치
 pip install transformers==4.39.3
 pip install peft bitsandbytes accelerate datasets
 pip install scikit-learn pandas tqdm
 
-# 안내
+# ⑤ 사용자 안내 메시지
 echo "✅ 설치 완료! 'huggingface-cli login'을 입력해 토큰을 등록하세요."
