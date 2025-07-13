@@ -16,10 +16,10 @@ os.system("unzip -q train2014.zip -d train2014")
 """🔹 1단계: VQA 데이터 다운로드 (필요 시 20,000개 추출)"""
 
 # 다운로드 및 압축 해제
-!wget -q https://s3.amazonaws.com/cvmlp/vqa/mscoco/vqa/v2_Questions_Train_mscoco.zip
-!wget -q https://s3.amazonaws.com/cvmlp/vqa/mscoco/vqa/v2_Annotations_Train_mscoco.zip
-!unzip -q v2_Questions_Train_mscoco.zip
-!unzip -q v2_Annotations_Train_mscoco.zip
+os.system("wget -q https://s3.amazonaws.com/cvmlp/vqa/mscoco/vqa/v2_Questions_Train_mscoco.zip")
+os.system("wget -q https://s3.amazonaws.com/cvmlp/vqa/mscoco/vqa/v2_Annotations_Train_mscoco.zip")
+os.system("unzip -q v2_Questions_Train_mscoco.zip")
+os.system("unzip -q v2_Annotations_Train_mscoco.zip")
 
 """🔹 2단계: VQA → Dacon 포맷 변환 (30,000개 제한)"""
 
