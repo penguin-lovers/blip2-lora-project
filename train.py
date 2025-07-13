@@ -7,14 +7,11 @@ Original file is located at
     https://colab.research.google.com/drive/1zQ2lyKuqyaS7FEqsIXXVRdmjpTPRBSQN
 """
 
-# 1. gdown 설치 (필요 시)
-pip install gdown
+import os
 
-# 2. gdown으로 Google Drive 파일 다운로드
-gdown --id 1FpLRZMeh2VL4pRjt5MVoZbTIhaJT4SOr
-
-# 3. 압축 해제
-unzip train2014.zip -d train_images
+os.system("pip install -q gdown")
+os.system("gdown --id 1FpLRZMeh2VL4pRjt5MVoZbTIhaJT4SOr")
+os.system("unzip -q train2014.zip -d train2014")
 
 """🔹 1단계: VQA 데이터 다운로드 (필요 시 20,000개 추출)"""
 
