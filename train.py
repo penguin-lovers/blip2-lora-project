@@ -183,7 +183,7 @@ training_args = TrainingArguments(
     fp16=True,
     logging_dir="./logs",
     logging_steps=10,
-    report_to="tensorboard"
+    report_to="none"
 )
 
 trainer = Trainer(
