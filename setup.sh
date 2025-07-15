@@ -11,6 +11,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 
 # ④ 필요한 Python 라이브러리 설치
 pip install transformers==4.39.3
+pip install peft==0.6.0
 pip install peft bitsandbytes accelerate datasets
 pip install scikit-learn pandas tqdm
 
