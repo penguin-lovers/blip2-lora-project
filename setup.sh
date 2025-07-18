@@ -1,19 +1,13 @@
 #!/bin/bash
 
-# ① 시스템 패키지 설치
-sudo apt update && sudo apt install -y git wget unzip python3-pip
+echo "✅ [1/4] 시스템 패키지 설치 중..."
+sudo apt update && sudo apt install -y unzip git wget
 
-# ② pip 최신화
-pip install --upgrade pip
+echo "✅ [2/4] Python 라이브러리 설치 중..."
+pip install -r requirements.txt
 
-# ③ PyTorch (CUDA 버전 지정)
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+echo "✅ [3/4] 모델 캐시 초기화 (선택적)..."
+rm -rf ~/.cache/huggingface/hub/models--Salesforce--blip2-flan-t5-xl
 
-# ④ 필요한 Python 라이브러리 설치
-pip install transformers==4.39.3
-pip install peft==0.6.0
-pip install peft bitsandbytes accelerate datasets
-pip install scikit-learn pandas tqdm
-
-# ⑤ 사용자 안내 메시지
-echo "✅ 설치 완료! 'huggingface-cli login'을 입력해 토큰을 등록하세요."
+echo "✅ [4/4] 학습 실행 (train.py)..."
+python train.py
