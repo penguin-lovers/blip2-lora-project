@@ -7,15 +7,15 @@ torch==2.1.2
 torchvision==0.16.2
 torchaudio==2.1.2
 
-# === HuggingFace Stack (Compatible with train.py) ===
-transformers==4.39.3
+# === HuggingFace Stack (Compatible with train.py + BLIP2) ===
+transformers==4.37.2
+tokenizers==0.14.1
+huggingface_hub==0.17.3
 peft==0.6.0
 accelerate==0.28.0
 bitsandbytes==0.41.1
 
 # === Tokenizer & Metrics ===
-tokenizers==0.14.1
-# tokenizers==0.13.3
 scikit-learn==1.3.2
 pandas==2.2.2
 tqdm==4.66.2
