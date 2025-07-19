@@ -1,6 +1,5 @@
 # === SYSTEM ===
 gdown
-wget
 
 # === PyTorch (CUDA 12.1 for Lambda A100) ===
 torch==2.1.2
