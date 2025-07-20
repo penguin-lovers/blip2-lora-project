@@ -8,7 +8,7 @@ torchaudio==2.1.2
 
 # === Hugging Face Stack (BLIP-2 Compatible) ===
 transformers==4.37.2
-tokenizers==0.18.0
+tokenizers==0.14.1
 huggingface_hub==0.20.0
 filelock==3.13.1
 packaging==23.1
