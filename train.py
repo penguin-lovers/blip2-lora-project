@@ -116,6 +116,9 @@ class VQADataset(Dataset):
 
 """🔹 4단계: 모델 로드 + LoRA layer.0~11 자동 설정"""
 
+import os
+os.environ["TRANSFORMERS_NO_TF"] = "1"  # ✅ TensorFlow 무시 설정
+
 import torch  # 반드시 필요
 from transformers import Blip2Processor, Blip2ForConditionalGeneration
 from peft import LoraConfig, get_peft_model, TaskType
